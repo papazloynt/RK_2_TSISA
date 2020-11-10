@@ -25,7 +25,7 @@ void mutation(std::pair<double, double>& p) {
 	}
 }
 
-void crossover(const std::pair<double, double>& Ihs, std::pair<double, double>& rhs, std::vector<std::pair<double, double>>& vec) {
+void crossover(const std::pair<double, double>& lhs, std::pair<double, double>& rhs, std::vector<std::pair<double, double>>& vec) {
 	std::pair<double, double> buf1, buf2;
 	buf1.first = lhs.first;
 	buf1.second = rhs.second;
