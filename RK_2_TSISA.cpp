@@ -19,9 +19,8 @@ bool max(std::pair<double, double> lhs, std::pair<double, double> rhs)
 
 void mutation(std::pair<double, double>& p) {
 	if (rand() % 100 < 25) {
-		double tmp = p.first;
-		p.first = p.second;
-		p.second = tmp;
+		p.first = (rand() % 100)/100.0;
+		p.second = (rand() % 100)/100.0;
 	}
 }
 
@@ -61,11 +60,11 @@ void print(std::vector<std::pair<double, double>>& vec) {
 
 int main() {
 	std::vector<std::pair<double, double>> vec(6);
-	std::random_device r;
+	srand(time(NULL));
 
 	for (size_t i = 0; i < 6; i++) {
-		vec[i].first = 1/ r();
-		vec[i].second = 1/ r();
+		vec[i].first = (rand() % 100)/100.0;
+		vec[i].second = (rand() % 100)/100.0;
 	}
 
 	std::sort(vec.begin(),vec.end(), max);
